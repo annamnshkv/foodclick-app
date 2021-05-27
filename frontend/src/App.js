@@ -60,7 +60,7 @@ function App() {
               className="open-sidebar"
               onClick={() => setSidebarIsOpen(true)}
             >
-              <i className="fa fa-bars"></i>
+              <i className="fa fa-bars"></i>≡
             </button>
             <Link className="brand" to="/">
             FoodClick
@@ -149,7 +149,7 @@ function App() {
                 className="close-sidebar"
                 type="button"
               >
-                <i className="fa fa-close"></i>
+                <i className="fa fa-close"></i>x
               </button>
             </li>
             {loadingCategories ? (

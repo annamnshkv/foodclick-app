@@ -7,7 +7,7 @@ const data = {
       email: 'admin@example.com',
       password: bcrypt.hashSync('1234', 8),
       isAdmin: true,
-      isSeller: true,
+      isSeller: false,
       seller: {
         name: 'Puma',
         logo: '/images/logo1.png',
@@ -21,6 +21,7 @@ const data = {
       email: 'user@example.com',
       password: bcrypt.hashSync('1234', 8),
       isAdmin: false,
+      isSeller: true,
     },
   ],
   products: [
