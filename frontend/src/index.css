@@ -27,7 +27,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #00574B;
   
 }
 main {
@@ -36,7 +36,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: #38aa7c;
   color: #ffffff;
 }
 /* Common */
@@ -53,7 +53,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #ff8000;
+  color: #FF9F00;
 }
 ul {
   padding: 0;
@@ -147,7 +147,7 @@ aside {
   position: fixed;
   width: 30rem;
   height: 100%;
-  background-color: #efefef;
+  background-color: #638074;
   z-index: 1000;
   transform: translateX(-30rem);
   transition: all 0.5s;
@@ -271,7 +271,7 @@ img.large {
   min-width: 12rem;
   padding: 1rem;
   z-index: 1;
-  background-color: #203040;
+  background-color: #076b5e;
   margin: 0;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
@@ -288,7 +288,7 @@ img.large {
   font-weight: bold;
 }
 .checkout-steps > div.active {
-  border-top-color: #f08000;
+  border-top-color: #FF9F00;
   color: #f08000;
 }
 /* Table */
@@ -297,12 +297,12 @@ img.large {
   border-collapse: collapse;
 }
 .table tbody tr:nth-of-type(odd) {
-  background-color: #f4f4f4;
+  background-color: #48947b;
 }
 .table td,
 .table th {
   text-align: left;
-  border: 0.1rem solid #e4e4e4;
+  border: 0.1rem solid #000000;
   padding: 0.5rem;
 }
 .table button {
