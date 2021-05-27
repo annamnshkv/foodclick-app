@@ -142,7 +142,7 @@ orderRouter.put(
         .messages()
         .send(
           {
-            from: 'FoodClick <fcmanager@mg.foodclick.herokuapp.com/>',
+            from: 'Amazona <amazona@mg.yourdomain.com>',
             to: `${order.user.name} <${order.user.email}>`,
             subject: `New order ${order._id}`,
             html: payOrderEmailTemplate(order),
