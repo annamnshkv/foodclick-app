@@ -27,8 +27,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #00574B;
-  
+  background-color: #203040;
 }
 main {
   grid-area: main;
@@ -36,7 +35,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #38aa7c;
+  background-color: #203040;
   color: #ffffff;
 }
 /* Common */
@@ -53,7 +52,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #FF9F00;
+  color: #ff8000;
 }
 ul {
   padding: 0;
@@ -147,7 +146,7 @@ aside {
   position: fixed;
   width: 30rem;
   height: 100%;
-  background-color: #638074;
+  background-color: #efefef;
   z-index: 1000;
   transform: translateX(-30rem);
   transition: all 0.5s;
@@ -271,7 +270,7 @@ img.large {
   min-width: 12rem;
   padding: 1rem;
   z-index: 1;
-  background-color: #076b5e;
+  background-color: #203040;
   margin: 0;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
@@ -288,7 +287,7 @@ img.large {
   font-weight: bold;
 }
 .checkout-steps > div.active {
-  border-top-color: #FF9F00;
+  border-top-color: #f08000;
   color: #f08000;
 }
 /* Table */
@@ -297,12 +296,12 @@ img.large {
   border-collapse: collapse;
 }
 .table tbody tr:nth-of-type(odd) {
-  background-color: #48947b;
+  background-color: #f4f4f4;
 }
 .table td,
 .table th {
   text-align: left;
-  border: 0.1rem solid #000000;
+  border: 0.1rem solid #e4e4e4;
   padding: 0.5rem;
 }
 .table button {
@@ -392,4 +391,79 @@ img.large {
 }
 .summary-title.color3 {
   background-color: #e0e0f0;
+}
+
+/* Chatbox */
+.chatbox {
+  color: #000000;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+.chatbox ul {
+  overflow: scroll;
+  max-height: 20rem;
+}
+.chatbox li {
+  margin-bottom: 1rem;
+}
+.chatbox input {
+  width: calc(100% - 9rem);
+}
+
+.support-users {
+  background: #f0f0f0;
+  height: 100%;
+}
+.support-users li {
+  background-color: #f8f8f8;
+}
+.support-users button {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+.support-users li {
+  margin: 0;
+  background-color: #f0f0f0;
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.support-users li:hover {
+  background-color: #f0f0f0;
+}
+.support-users li.selected {
+  background-color: #c0c0c0;
+}
+.support-messages {
+  padding: 1rem;
+}
+.support-messages input {
+  width: calc(100% - 9rem);
+}
+.support-messages ul {
+  height: calc(100vh - 18rem);
+  max-height: calc(100vh - 18rem);
+  overflow: scroll;
+}
+.support-messages li {
+  margin-bottom: 1rem;
+}
+
+.support-users span {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 10px;
+}
+.support-users .offline {
+  background-color: #808080;
+}
+.support-users .online {
+  background-color: #20a020;
+}
+.support-users .unread {
+  background-color: #f02020;
 }

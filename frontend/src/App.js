@@ -29,6 +29,8 @@ import LoadingBox from './components/LoadingBox';
 import MessageBox from './components/MessageBox';
 import MapScreen from './screens/MapScreen';
 import DashboardScreen from './screens/DashboardScreen';
+import SupportScreen from './screens/SupportScreen';
+import ChatBox from './components/ChatBox';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -60,7 +62,7 @@ function App() {
               className="open-sidebar"
               onClick={() => setSidebarIsOpen(true)}
             >
-              <i className="fa fa-bars"></i>≡
+              <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
             FoodClick
@@ -135,6 +137,9 @@ function App() {
                   <li>
                     <Link to="/userlist">Users</Link>
                   </li>
+                  <li>
+                    <Link to="/support">Support</Link>
+                  </li>
                 </ul>
               </div>
             )}
@@ -143,13 +148,13 @@ function App() {
         <aside className={sidebarIsOpen ? 'open' : ''}>
           <ul className="categories">
             <li>
-              <strong style={{color: "white"}}>Categories</strong>
+              <strong>Categories</strong>
               <button
                 onClick={() => setSidebarIsOpen(false)}
                 className="close-sidebar"
                 type="button"
               >
-                <i className="fa fa-close"></i>x
+                <i className="fa fa-close"></i>
               </button>
             </li>
             {loadingCategories ? (
@@ -236,6 +241,7 @@ function App() {
             path="/dashboard"
             component={DashboardScreen}
           ></AdminRoute>
+          <AdminRoute path="/support" component={SupportScreen}></AdminRoute>
 
           <SellerRoute
             path="/productlist/seller"
@@ -248,7 +254,10 @@ function App() {
 
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center">All right reserved</footer>
+        <footer className="row center">
+          {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
+          <div>All right reserved</div>{' '}
+        </footer>
       </div>
     </BrowserRouter>
   );
